@@ -1,0 +1,4 @@
+С помощью оператора SELECT выведите текст "Hello world"
+
+Решение:
+SELECT "Hello world"

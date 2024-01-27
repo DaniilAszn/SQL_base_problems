@@ -1,0 +1,24 @@
+Для каждого отдельного платежа выведите идентификатор товара и сумму, потраченную на него, в отсортированном по убыванию этой суммы виде. Список платежей находится в таблице Payments.
+Задача 1:
+Для вывода суммы используйте псевдоним sum.
+
+Решение:
+SELECT 
+    good, 
+    amount * unit_price AS sum
+FROM Payments
+ORDER BY 
+    sum DESC
+
+
+
+Задача 2:
+Выведите все данные членов семьи с фамилией Quincey из таблицы FamilyMembers и отсортируйте их по возрастанию сначала по столбцу status, а затем по member_name.
+
+Решение:
+SELECT *
+FROM FamilyMembers
+WHERE member_name LIKE "%Quincey"
+ORDER BY 
+    status ASC,
+    member_name ASC

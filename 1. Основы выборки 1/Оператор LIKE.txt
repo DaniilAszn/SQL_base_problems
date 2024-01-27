@@ -1,0 +1,9 @@
+Задача 1:
+Найдите всех членов семьи с фамилией "Quincey" и выведите поле member_name
+
+Решение:
+SELECT 
+    member_name 
+FROM FamilyMembers
+WHERE
+    member_name LIKE "%Quincey"

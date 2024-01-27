@@ -1,0 +1,17 @@
+Задача 1:
+Выведите только уникальные имена first_name студентов из таблицы Student.
+
+Решение:
+SELECT 
+    DISTINCT first_name
+FROM Student
+
+
+
+Задача 2:
+Выведите только уникальные пары значений идентификатор учителя teacher и идентификатор предмета subject из таблицы Schedule.
+Решение:
+SELECT DISTINCT
+    teacher,
+    subject
+FROM Schedule

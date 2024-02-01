@@ -1,0 +1,35 @@
+Создаём табличное выражение Aeroflot_trips, содержащие все полёты, совершенные авиакомпанией «Aeroflot»
+
+WITH Aeroflot_trips AS (
+    SELECT 
+        plane, 
+        town_from, 
+        town_to 
+    FROM Company
+    INNER JOIN Trip 
+        ON Trip.company = Company.id 
+    WHERE 
+        name = "Aeroflot"
+)
+
+SELECT * 
+FROM Aeroflot_trips;
+
+
+
+Аналогично, создаём табличное выражение Aeroflot_trips, но с переименованными колонками
+
+WITH Aeroflot_trips (aeroflot_plane, town_from, town_to) AS (
+    SELECT 
+        plane, 
+        town_from, 
+        town_to 
+    FROM Company
+    INNER JOIN Trip 
+        ON Trip.company = Company.id 
+    WHERE 
+        name = "Aeroflot"
+)
+
+SELECT * 
+FROM Aeroflot_trips;

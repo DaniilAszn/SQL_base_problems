@@ -1,0 +1,14 @@
+Задача 1:
+Выведите всю информацию о пользователе из таблицы Users, кто является владельцем самого дорого жилья (таблица Rooms).
+
+Решение:
+SELECT *
+FROM Users
+WHERE Users.id = (
+    SELECT
+        owner_id
+    FROM Rooms
+    ORDER BY
+        price DESC
+    LIMIT 1
+)

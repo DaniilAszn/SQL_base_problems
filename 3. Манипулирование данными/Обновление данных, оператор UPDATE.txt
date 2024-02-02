@@ -1,0 +1,9 @@
+Задача 1:
+Измените имя у "Wednesday Addams" на новое "Tuesday Addams".
+
+Решение:
+UPDATE FamilyMembers
+SET 
+    member_name = 'Tuesday Addams'
+WHERE 
+    member_name = 'Wednesday Addams'

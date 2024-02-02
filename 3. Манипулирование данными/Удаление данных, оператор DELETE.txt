@@ -1,0 +1,28 @@
+Задача 1:
+Удалите все записи из таблицы Payments, используя оператор DELETE.
+
+Решение:
+DELETE FROM Payments
+
+
+
+Задача 2:
+Удалить запись из таблицы Goods, у которой поле good_name равно "milk"
+
+Решение:
+DELETE FROM Goods
+WHERE 
+    good_name = 'milk'
+
+
+
+Задача 3:
+Измените запрос так, чтобы удалить товары (Goods), имеющие тип деликатесов (delicacies).
+
+Решение:
+DELETE Goods 
+FROM Goods
+JOIN GoodTypes 
+    ON Goods.type = GoodTypes.good_type_id 
+WHERE 
+    GoodTypes.good_type_name = "delicacies"

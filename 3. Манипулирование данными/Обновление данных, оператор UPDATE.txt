@@ -7,3 +7,14 @@ SET
     member_name = 'Tuesday Addams'
 WHERE 
     member_name = 'Wednesday Addams'
+
+
+
+Задача 1:
+Обновите стоимость всех комнат в таблице (Rooms), добавив к текущей 10 единиц
+
+Решение:
+UPDATE Rooms
+SET 
+    price = price + 10
+    

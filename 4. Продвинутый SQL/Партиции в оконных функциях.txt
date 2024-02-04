@@ -1,0 +1,9 @@
+Задача 1:
+Из таблицы Rooms вывести поля home_type и price, а также добавить колонку min_price_by_type, в которой необходимо вывести минимальную стоимость жилья для текущего типа жилья (home_type). Для вычисления минимальной стоимости нужно использовать оконную функцию MIN.
+
+Решение:
+SELECT 
+  home_type, 
+  price, 
+  MIN(price) OVER (PARTITION BY home_type) AS min_price_by_type 
+FROM Rooms

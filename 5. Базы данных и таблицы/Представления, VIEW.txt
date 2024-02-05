@@ -1,0 +1,32 @@
+CREATE DATABASE имя_базы_данных;
+
+USE имя_базы_данных;
+
+CREATE TABLE [IF NOT EXIST] имя_таблицы (
+     столбец_1 тип_данных,
+    [столбец_2 тип_данных,]
+    ...
+    [столбец_n тип_данных,]
+);
+
+CREATE TABLE Users (
+    id INT,
+    name VARCHAR(255) NOT NULL,
+    age INT NOT NULL DEFAULT 18,
+    company INT,
+    PRIMARY KEY (id),
+    FOREIGN KEY (company) REFERENCES Companies (id)
+);
+
+
+
+Задача 1:
+На основании таблицы Student создайте представление ViewStudent, содержащие только поля id, first_name и last_name.
+
+Решение:
+CREATE VIEW ViewStudent AS 
+    SELECT 
+        id,
+        first_name,
+        last_name
+FROM Student
